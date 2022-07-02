@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="database0Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CPU">
+    <Key>
+      <PropertyRef Name="Код_CPU" />
+    </Key>
+    <Property Name="Код_CPU" Type="Int32" Nullable="false" />
+    <Property Name="Модель" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Сокет" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ядро" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Техпроцесс" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Частота" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Тип_памяти" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Стоимость" Type="Int32" />
+    <NavigationProperty Name="Table" Relationship="Self.FK_Table_CPU" FromRole="CPU" ToRole="Table" />
+  </EntityType>
+  <EntityType Name="GPU">
+    <Key>
+      <PropertyRef Name="Код_GPU" />
+    </Key>
+    <Property Name="Код_GPU" Type="Int32" Nullable="false" />
+    <Property Name="Модель" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Графический_процессор" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Техпроцесс" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Объем_видеопамяти" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Тип_памяти" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Версия_шейдера" Type="Double" />
+    <Property Name="Стоимость" Type="Int32" />
+    <NavigationProperty Name="Table" Relationship="Self.FK_Table_GPU" FromRole="GPU" ToRole="Table" />
+  </EntityType>
+  <EntityType Name="HDD">
+    <Key>
+      <PropertyRef Name="Код_HDD" />
+    </Key>
+    <Property Name="Код_HDD" Type="Int32" Nullable="false" />
+    <Property Name="Модель" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Объем" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Интерфейс" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Стоимость" Type="Int32" />
+    <NavigationProperty Name="Table" Relationship="Self.FK_Table_HDD" FromRole="HDD" ToRole="Table" />
+  </EntityType>
+  <EntityType Name="MB">
+    <Key>
+      <PropertyRef Name="Код_MB" />
+    </Key>
+    <Property Name="Код_MB" Type="Int32" Nullable="false" />
+    <Property Name="Модель" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Форм_фактор" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Сокет" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Чипсет" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Слотов_памяти" Type="Int32" />
+    <Property Name="Тип_памяти" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Версия" Type="Double" />
+    <Property Name="Стоимость" Type="Int32" />
+    <NavigationProperty Name="Table" Relationship="Self.FK_Table_MB" FromRole="MB" ToRole="Table" />
+  </EntityType>
+  <EntityType Name="PS">
+    <Key>
+      <PropertyRef Name="Код_PS" />
+    </Key>
+    <Property Name="Код_PS" Type="Int32" Nullable="false" />
+    <Property Name="Модель" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Мощность" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Форм_фактор" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Сертификат" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Стоимость" Type="Int32" />
+    <NavigationProperty Name="Table" Relationship="Self.FK_Table_PS" FromRole="PS" ToRole="Table" />
+  </EntityType>
+  <EntityType Name="RAM">
+    <Key>
+      <PropertyRef Name="Код_RAM" />
+    </Key>
+    <Property Name="Код_RAM" Type="Int32" Nullable="false" />
+    <Property Name="Модель" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Тип_памяти" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Форм_фактор" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Объем" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Частота" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Стоимость" Type="Int32" />
+    <NavigationProperty Name="Table" Relationship="Self.FK_Table_RAM" FromRole="RAM" ToRole="Table" />
+  </EntityType>
+  <EntityType Name="Repair">
+    <Key>
+      <PropertyRef Name="Код_Repair" />
+    </Key>
+    <Property Name="Код_Repair" Type="Int32" Nullable="false" />
+    <Property Name="Наименование" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Модель" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Повреждено" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Дата_начала_ремонта" Type="DateTime" Precision="0" />
+    <Property Name="Дата_окончания_ремонта" Type="DateTime" Precision="0" />
+    <Property Name="Стоимость_ремонта" Type="Int32" />
+    <NavigationProperty Name="Table" Relationship="Self.FK_Table_Repair" FromRole="Repair" ToRole="Table" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="Код_CPU" />
+      <PropertyRef Name="Код_GPU" />
+      <PropertyRef Name="Код_HDD" />
+      <PropertyRef Name="Код_MB" />
+      <PropertyRef Name="Код_PS" />
+      <PropertyRef Name="Код_RAM" />
+      <PropertyRef Name="Код_Repair" />
+    </Key>
+    <Property Name="Код_CPU" Type="Int32" Nullable="false" />
+    <Property Name="Код_GPU" Type="Int32" Nullable="false" />
+    <Property Name="Код_HDD" Type="Int32" Nullable="false" />
+    <Property Name="Код_MB" Type="Int32" Nullable="false" />
+    <Property Name="Код_PS" Type="Int32" Nullable="false" />
+    <Property Name="Код_RAM" Type="Int32" Nullable="false" />
+    <Property Name="Код_Repair" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CPU" Relationship="Self.FK_Table_CPU" FromRole="Table" ToRole="CPU" />
+    <NavigationProperty Name="GPU" Relationship="Self.FK_Table_GPU" FromRole="Table" ToRole="GPU" />
+    <NavigationProperty Name="HDD" Relationship="Self.FK_Table_HDD" FromRole="Table" ToRole="HDD" />
+    <NavigationProperty Name="MB" Relationship="Self.FK_Table_MB" FromRole="Table" ToRole="MB" />
+    <NavigationProperty Name="PS" Relationship="Self.FK_Table_PS" FromRole="Table" ToRole="PS" />
+    <NavigationProperty Name="RAM" Relationship="Self.FK_Table_RAM" FromRole="Table" ToRole="RAM" />
+    <NavigationProperty Name="Repair" Relationship="Self.FK_Table_Repair" FromRole="Table" ToRole="Repair" />
+  </EntityType>
+  <Association Name="FK_Table_CPU">
+    <End Role="CPU" Type="Self.CPU" Multiplicity="1" />
+    <End Role="Table" Type="Self.Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CPU">
+        <PropertyRef Name="Код_CPU" />
+      </Principal>
+      <Dependent Role="Table">
+        <PropertyRef Name="Код_CPU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_GPU">
+    <End Role="GPU" Type="Self.GPU" Multiplicity="1" />
+    <End Role="Table" Type="Self.Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GPU">
+        <PropertyRef Name="Код_GPU" />
+      </Principal>
+      <Dependent Role="Table">
+        <PropertyRef Name="Код_GPU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_HDD">
+    <End Role="HDD" Type="Self.HDD" Multiplicity="1" />
+    <End Role="Table" Type="Self.Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HDD">
+        <PropertyRef Name="Код_HDD" />
+      </Principal>
+      <Dependent Role="Table">
+        <PropertyRef Name="Код_HDD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_MB">
+    <End Role="MB" Type="Self.MB" Multiplicity="1" />
+    <End Role="Table" Type="Self.Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MB">
+        <PropertyRef Name="Код_MB" />
+      </Principal>
+      <Dependent Role="Table">
+        <PropertyRef Name="Код_MB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_PS">
+    <End Role="PS" Type="Self.PS" Multiplicity="1" />
+    <End Role="Table" Type="Self.Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PS">
+        <PropertyRef Name="Код_PS" />
+      </Principal>
+      <Dependent Role="Table">
+        <PropertyRef Name="Код_PS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_RAM">
+    <End Role="RAM" Type="Self.RAM" Multiplicity="1" />
+    <End Role="Table" Type="Self.Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RAM">
+        <PropertyRef Name="Код_RAM" />
+      </Principal>
+      <Dependent Role="Table">
+        <PropertyRef Name="Код_RAM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_Repair">
+    <End Role="Repair" Type="Self.Repair" Multiplicity="1" />
+    <End Role="Table" Type="Self.Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Repair">
+        <PropertyRef Name="Код_Repair" />
+      </Principal>
+      <Dependent Role="Table">
+        <PropertyRef Name="Код_Repair" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="database0Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CPU" EntityType="Self.CPU" />
+    <EntitySet Name="GPU" EntityType="Self.GPU" />
+    <EntitySet Name="HDD" EntityType="Self.HDD" />
+    <EntitySet Name="MB" EntityType="Self.MB" />
+    <EntitySet Name="PS" EntityType="Self.PS" />
+    <EntitySet Name="RAM" EntityType="Self.RAM" />
+    <EntitySet Name="Repair" EntityType="Self.Repair" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Table" EntityType="Self.Table" />
+    <AssociationSet Name="FK_Table_CPU" Association="Self.FK_Table_CPU">
+      <End Role="CPU" EntitySet="CPU" />
+      <End Role="Table" EntitySet="Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_GPU" Association="Self.FK_Table_GPU">
+      <End Role="GPU" EntitySet="GPU" />
+      <End Role="Table" EntitySet="Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_HDD" Association="Self.FK_Table_HDD">
+      <End Role="HDD" EntitySet="HDD" />
+      <End Role="Table" EntitySet="Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_MB" Association="Self.FK_Table_MB">
+      <End Role="MB" EntitySet="MB" />
+      <End Role="Table" EntitySet="Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_PS" Association="Self.FK_Table_PS">
+      <End Role="PS" EntitySet="PS" />
+      <End Role="Table" EntitySet="Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_RAM" Association="Self.FK_Table_RAM">
+      <End Role="RAM" EntitySet="RAM" />
+      <End Role="Table" EntitySet="Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_Repair" Association="Self.FK_Table_Repair">
+      <End Role="Repair" EntitySet="Repair" />
+      <End Role="Table" EntitySet="Table" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

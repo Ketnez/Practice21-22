@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище database0ModelContainer" CdmEntityContainer="database0Entities">
+    <EntitySetMapping Name="CPU">
+      <EntityTypeMapping TypeName="database0Model.CPU">
+        <MappingFragment StoreEntitySet="CPU">
+          <ScalarProperty Name="Код_CPU" ColumnName="Код CPU" />
+          <ScalarProperty Name="Модель" ColumnName="Модель" />
+          <ScalarProperty Name="Сокет" ColumnName="Сокет" />
+          <ScalarProperty Name="Ядро" ColumnName="Ядро" />
+          <ScalarProperty Name="Техпроцесс" ColumnName="Техпроцесс" />
+          <ScalarProperty Name="Частота" ColumnName="Частота" />
+          <ScalarProperty Name="Тип_памяти" ColumnName="Тип памяти" />
+          <ScalarProperty Name="Стоимость" ColumnName="Стоимость" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GPU">
+      <EntityTypeMapping TypeName="database0Model.GPU">
+        <MappingFragment StoreEntitySet="GPU">
+          <ScalarProperty Name="Код_GPU" ColumnName="Код GPU" />
+          <ScalarProperty Name="Модель" ColumnName="Модель" />
+          <ScalarProperty Name="Графический_процессор" ColumnName="Графический процессор" />
+          <ScalarProperty Name="Техпроцесс" ColumnName="Техпроцесс" />
+          <ScalarProperty Name="Объем_видеопамяти" ColumnName="Объем видеопамяти" />
+          <ScalarProperty Name="Тип_памяти" ColumnName="Тип памяти" />
+          <ScalarProperty Name="Версия_шейдера" ColumnName="Версия шейдера" />
+          <ScalarProperty Name="Стоимость" ColumnName="Стоимость" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HDD">
+      <EntityTypeMapping TypeName="database0Model.HDD">
+        <MappingFragment StoreEntitySet="HDD">
+          <ScalarProperty Name="Код_HDD" ColumnName="Код HDD" />
+          <ScalarProperty Name="Модель" ColumnName="Модель" />
+          <ScalarProperty Name="Объем" ColumnName="Объем" />
+          <ScalarProperty Name="Интерфейс" ColumnName="Интерфейс" />
+          <ScalarProperty Name="Стоимость" ColumnName="Стоимость" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MB">
+      <EntityTypeMapping TypeName="database0Model.MB">
+        <MappingFragment StoreEntitySet="MB">
+          <ScalarProperty Name="Код_MB" ColumnName="Код MB" />
+          <ScalarProperty Name="Модель" ColumnName="Модель" />
+          <ScalarProperty Name="Форм_фактор" ColumnName="Форм-фактор" />
+          <ScalarProperty Name="Сокет" ColumnName="Сокет" />
+          <ScalarProperty Name="Чипсет" ColumnName="Чипсет" />
+          <ScalarProperty Name="Слотов_памяти" ColumnName="Слотов памяти" />
+          <ScalarProperty Name="Тип_памяти" ColumnName="Тип памяти" />
+          <ScalarProperty Name="Версия" ColumnName="Версия" />
+          <ScalarProperty Name="Стоимость" ColumnName="Стоимость" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PS">
+      <EntityTypeMapping TypeName="database0Model.PS">
+        <MappingFragment StoreEntitySet="PS">
+          <ScalarProperty Name="Код_PS" ColumnName="Код PS" />
+          <ScalarProperty Name="Модель" ColumnName="Модель" />
+          <ScalarProperty Name="Мощность" ColumnName="Мощность" />
+          <ScalarProperty Name="Форм_фактор" ColumnName="Форм-фактор" />
+          <ScalarProperty Name="Сертификат" ColumnName="Сертификат" />
+          <ScalarProperty Name="Стоимость" ColumnName="Стоимость" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RAM">
+      <EntityTypeMapping TypeName="database0Model.RAM">
+        <MappingFragment StoreEntitySet="RAM">
+          <ScalarProperty Name="Код_RAM" ColumnName="Код RAM" />
+          <ScalarProperty Name="Модель" ColumnName="Модель" />
+          <ScalarProperty Name="Тип_памяти" ColumnName="Тип памяти" />
+          <ScalarProperty Name="Форм_фактор" ColumnName="Форм-фактор" />
+          <ScalarProperty Name="Объем" ColumnName="Объем" />
+          <ScalarProperty Name="Частота" ColumnName="Частота" />
+          <ScalarProperty Name="Стоимость" ColumnName="Стоимость" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Repair">
+      <EntityTypeMapping TypeName="database0Model.Repair">
+        <MappingFragment StoreEntitySet="Repair">
+          <ScalarProperty Name="Код_Repair" ColumnName="Код Repair" />
+          <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+          <ScalarProperty Name="Модель" ColumnName="Модель" />
+          <ScalarProperty Name="Повреждено" ColumnName="Повреждено" />
+          <ScalarProperty Name="Дата_начала_ремонта" ColumnName="Дата начала ремонта" />
+          <ScalarProperty Name="Дата_окончания_ремонта" ColumnName="Дата окончания ремонта" />
+          <ScalarProperty Name="Стоимость_ремонта" ColumnName="Стоимость ремонта" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="database0Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table">
+      <EntityTypeMapping TypeName="database0Model.Table">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="Код_CPU" ColumnName="Код CPU" />
+          <ScalarProperty Name="Код_GPU" ColumnName="Код GPU" />
+          <ScalarProperty Name="Код_HDD" ColumnName="Код HDD" />
+          <ScalarProperty Name="Код_MB" ColumnName="Код MB" />
+          <ScalarProperty Name="Код_PS" ColumnName="Код PS" />
+          <ScalarProperty Name="Код_RAM" ColumnName="Код RAM" />
+          <ScalarProperty Name="Код_Repair" ColumnName="Код Repair" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
