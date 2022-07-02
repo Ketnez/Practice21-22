@@ -1,0 +1,155 @@
+﻿<Window x:Class="data0.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:data0"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="CPU">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="Grid1" Margin="0,0,0,90" Loaded="Window_Loaded">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="60" Header="Код CPU" Binding="{Binding Код_CPU}"/>
+                            <DataGridTextColumn Width="130" Header="Модель" Binding="{Binding Модель}"/>
+                            <DataGridTextColumn Width="50" Header="Сокет" Binding="{Binding Сокет}"/>
+                            <DataGridTextColumn Width="40" Header="Ядро" Binding="{Binding Ядро}"/>
+                            <DataGridTextColumn Width="80" Header="Техпроцесс" Binding="{Binding Техпроцесс}"/>
+                            <DataGridTextColumn Width="100" Header="Частота" Binding="{Binding Частота}"/>
+                            <DataGridTextColumn Width="80" Header="Тип_памяти" Binding="{Binding Тип_памяти}"/>
+                            <DataGridTextColumn Width="110" Header="Стоимость" Binding="{Binding Стоимость}"/>
+                            
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="q3" Content="Delete" HorizontalAlignment="Left" Margin="100,346,0,0" VerticalAlignment="Top" Click="q3_Click"/>
+                    <Button x:Name="q2" Content="Edit" HorizontalAlignment="Left" Margin="55,346,0,0" VerticalAlignment="Top" Click="q2_Click"/>
+                    <Button x:Name="q1" Content="Add" HorizontalAlignment="Left" Margin="10,346,0,0" VerticalAlignment="Top" Click="q1_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="GPU">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="Grid2" Margin="0,0,0,90">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="60" Header="Код_GPU" Binding="{Binding Код_GPU}"/>
+                            <DataGridTextColumn Width="130" Header="Модель" Binding="{Binding Модель}"/>
+                            <DataGridTextColumn Width="50" Header="Графический_процессор" Binding="{Binding Графический_процессор}"/>
+                            <DataGridTextColumn Width="100" Header="Техпроцесс" Binding="{Binding Техпроцесс}"/>
+                            <DataGridTextColumn Width="130" Header="Объем_видеопамяти" Binding="{Binding Объем_видеопамяти}"/>
+                            <DataGridTextColumn Width="100" Header="Тип_памяти" Binding="{Binding Тип_памяти}"/>
+                            <DataGridTextColumn Width="100" Header="Версия_шейдера" Binding="{Binding Версия_шейдера}"/>
+                            <DataGridTextColumn Width="110" Header="Стоимость" Binding="{Binding Стоимость}"/>
+
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="w3" Content="Delete" HorizontalAlignment="Left" Margin="100,346,0,0" VerticalAlignment="Top" Click="w3_Click"/>
+                    <Button x:Name="w2" Content="Edit" HorizontalAlignment="Left" Margin="55,346,0,0" VerticalAlignment="Top" Click="w2_Click"/>
+                    <Button x:Name="w1" Content="Add" HorizontalAlignment="Left" Margin="10,346,0,0" VerticalAlignment="Top" Click="w1_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="HDD">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="Grid3" Margin="0,0,0,90">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="60" Header="Код_HDD" Binding="{Binding Код_HDD}"/>
+                            <DataGridTextColumn Width="130" Header="Модель" Binding="{Binding Модель}"/>
+                            <DataGridTextColumn Width="50" Header="Объем" Binding="{Binding Объем}"/>
+                            <DataGridTextColumn Width="100" Header="Интерфейс" Binding="{Binding Интерфейс}"/>
+                            <DataGridTextColumn Width="110" Header="Стоимость" Binding="{Binding Стоимость}"/>
+
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="e3" Content="Delete" HorizontalAlignment="Left" Margin="100,346,0,0" VerticalAlignment="Top" Click="e3_Click"/>
+                    <Button x:Name="e2" Content="Edit" HorizontalAlignment="Left" Margin="55,346,0,0" VerticalAlignment="Top" Click="e2_Click"/>
+                    <Button x:Name="e1" Content="Add" HorizontalAlignment="Left" Margin="10,346,0,0" VerticalAlignment="Top" Click="e1_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="MB">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="Grid4" Margin="0,0,0,90">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="60" Header="Код_MB" Binding="{Binding Код_MB}"/>
+                            <DataGridTextColumn Width="70" Header="Модель" Binding="{Binding Модель}"/>
+                            <DataGridTextColumn Width="50" Header="Форм_фактор" Binding="{Binding Форм_фактор}"/>
+                            <DataGridTextColumn Width="100" Header="Сокет" Binding="{Binding Сокет}"/>
+                            <DataGridTextColumn Width="100" Header="Чипсет" Binding="{Binding Чипсет}"/>
+                            <DataGridTextColumn Width="100" Header="Слотов_памяти" Binding="{Binding Слотов_памяти}"/>
+                            <DataGridTextColumn Width="100" Header="Тип_памяти" Binding="{Binding Тип_памяти}"/>
+                            <DataGridTextColumn Width="100" Header="Версия" Binding="{Binding Версия}"/>
+                            <DataGridTextColumn Width="100" Header="Стоимость" Binding="{Binding Стоимость}"/>
+
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="r3" Content="Delete" HorizontalAlignment="Left" Margin="100,346,0,0" VerticalAlignment="Top" Click="r3_Click"/>
+                    <Button x:Name="r2" Content="Edit" HorizontalAlignment="Left" Margin="55,346,0,0" VerticalAlignment="Top" Click="r2_Click"/>
+                    <Button x:Name="r1" Content="Add" HorizontalAlignment="Left" Margin="10,346,0,0" VerticalAlignment="Top" Click="r1_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="PS">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="Grid5" Margin="0,0,0,90">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="60" Header="Код_PS" Binding="{Binding Код_PS}"/>
+                            <DataGridTextColumn Width="70" Header="Модель" Binding="{Binding Модель}"/>
+                            <DataGridTextColumn Width="50" Header="Мощность" Binding="{Binding Мощность}"/>
+                            <DataGridTextColumn Width="100" Header="Форм_фактор" Binding="{Binding Форм_фактор}"/>
+                            <DataGridTextColumn Width="100" Header="Сертификат" Binding="{Binding Сертификат}"/>
+                            <DataGridTextColumn Width="100" Header="Стоимость" Binding="{Binding Стоимость}"/>
+
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="t3" Content="Delete" HorizontalAlignment="Left" Margin="100,346,0,0" VerticalAlignment="Top" Click="t3_Click"/>
+                    <Button x:Name="t2" Content="Edit" HorizontalAlignment="Left" Margin="55,346,0,0" VerticalAlignment="Top" Click="t2_Click"/>
+                    <Button x:Name="t1" Content="Add" HorizontalAlignment="Left" Margin="10,346,0,0" VerticalAlignment="Top" Click="t1_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="RAM">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="Grid6" Margin="0,0,0,90">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="60" Header="Код_RAM" Binding="{Binding Код_RAM}"/>
+                            <DataGridTextColumn Width="70" Header="Модель" Binding="{Binding Модель}"/>
+                            <DataGridTextColumn Width="50" Header="Тип_памяти" Binding="{Binding Тип_памяти}"/>
+                            <DataGridTextColumn Width="100" Header="Форм_фактор" Binding="{Binding Форм_фактор}"/>
+                            <DataGridTextColumn Width="100" Header="Объем" Binding="{Binding Объем}"/>
+                            <DataGridTextColumn Width="100" Header="Частота" Binding="{Binding Частота}"/>
+                            <DataGridTextColumn Width="100" Header="Стоимость" Binding="{Binding Стоимость}"/>
+
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="y3" Content="Delete" HorizontalAlignment="Left" Margin="100,346,0,0" VerticalAlignment="Top" Click="y3_Click"/>
+                    <Button x:Name="y2" Content="Edit" HorizontalAlignment="Left" Margin="55,346,0,0" VerticalAlignment="Top" Click="y2_Click"/>
+                    <Button x:Name="y1" Content="Add" HorizontalAlignment="Left" Margin="10,346,0,0" VerticalAlignment="Top" Click="y1_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Repair">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="Grid7" Margin="0,0,0,90">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="60" Header="Код_Repair" Binding="{Binding Код_Repair}"/>
+                            <DataGridTextColumn Width="70" Header="Наименование" Binding="{Binding Наименование}"/>
+                            <DataGridTextColumn Width="50" Header="Модель" Binding="{Binding Модель}"/>
+                            <DataGridTextColumn Width="100" Header="Повреждено" Binding="{Binding Повреждено}"/>
+                            <DataGridTextColumn Width="100" Header="Дата_начала_ремонта" Binding="{Binding Дата_начала_ремонта}"/>
+                            <DataGridTextColumn Width="100" Header="Дата_окончания_ремонта" Binding="{Binding Дата_окончания_ремонта}"/>
+                            <DataGridTextColumn Width="100" Header="Стоимость_ремонта" Binding="{Binding Стоимость_ремонта}"/>
+
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="u3" Content="Delete" HorizontalAlignment="Left" Margin="100,346,0,0" VerticalAlignment="Top" Click="u3_Click"/>
+                    <Button x:Name="u2" Content="Edit" HorizontalAlignment="Left" Margin="55,346,0,0" VerticalAlignment="Top" Click="u2_Click"/>
+                    <Button x:Name="u1" Content="Add" HorizontalAlignment="Left" Margin="10,346,0,0" VerticalAlignment="Top" Click="u1_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

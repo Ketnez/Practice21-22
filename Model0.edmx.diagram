@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b19f16f6302046b596460778b0c5480b" Name="Diagram1">
+        <EntityTypeShape EntityType="database0Model.CPU" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="database0Model.GPU" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="database0Model.HDD" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="database0Model.MB" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="database0Model.PS" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="database0Model.RAM" Width="1.5" PointX="0.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="database0Model.Repair" Width="1.5" PointX="0.75" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="database0Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="database0Model.Table" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="database0Model.FK_Table_CPU" ManuallyRouted="false" />
+        <AssociationConnector Association="database0Model.FK_Table_GPU" ManuallyRouted="false" />
+        <AssociationConnector Association="database0Model.FK_Table_HDD" ManuallyRouted="false" />
+        <AssociationConnector Association="database0Model.FK_Table_MB" ManuallyRouted="false" />
+        <AssociationConnector Association="database0Model.FK_Table_PS" ManuallyRouted="false" />
+        <AssociationConnector Association="database0Model.FK_Table_RAM" ManuallyRouted="false" />
+        <AssociationConnector Association="database0Model.FK_Table_Repair" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
